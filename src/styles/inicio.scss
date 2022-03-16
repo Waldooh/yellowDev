@@ -1,0 +1,41 @@
+    /* Theme */
+  $yellow:#f5d300;
+  $black: #292929;
+  $darker: #191919;
+  $grey: #757474;
+
+// header {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   padding: 30px;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   z-index: 10;
+
+//   ul {
+//     position: relative;
+//     display: flex;
+//     list-style: none;
+//   }
+
+//   a {
+//     color: #000;
+//     margin-left: 40px;
+//     text-decoration: none;
+//   }
+
+//   h5 {
+//     font-weight: 900;
+//   }
+// }
+
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: $yellow;
+}

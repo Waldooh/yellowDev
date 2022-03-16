@@ -1,0 +1,27 @@
+
+$Lato: 'Lato', sans-serif;
+
+// colors
+$yellow:#f5d300;
+$black: #191919;
+$greyDark: #292929;
+$greyLight: #757474;
+
+// spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// border radius
+$borderRadius: 8px;
+
+// header height
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    //768px
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
