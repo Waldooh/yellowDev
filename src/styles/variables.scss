@@ -12,10 +12,10 @@ $spacing-md: 16px;
 $spacing-lg: 32px;
 
 // border radius
-$borderRadius: 8px;
+$borderRadius: 15px;
 
 // header height
-$headerHeight: 100px;
+$headerHeight: 110px;
 
 @mixin breakpoint($point) {
   @if $point == md {

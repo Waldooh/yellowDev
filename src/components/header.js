@@ -14,13 +14,13 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.header__content}>
-        <h4 className={styles.header__content__logo}>Yellow Dev</h4>
+        <h4 className={styles.header__content__logo}>{'<Yellow Dev>'}</h4>
 
         <nav className={`${styles.header__content__nav} ${menuOpen ? styles.isMenu : ""}`}>
           <ul>
-            <li><a href='#'>Inicio</a></li>
-            <li><a href='#'>Nosotros</a></li>
             <li><a href='#'>Servicios</a></li>
+            <li><a href='#'>Portafolio</a></li>
+            <li><a href='#'>Planes</a></li>
             <li><a href='#'>Contacto</a></li>
           </ul>
         </nav>
