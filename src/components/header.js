@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../styles/Header.module.scss';
+import styles from '../styles/_header.module.scss';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -26,7 +26,7 @@ const Header = () => {
         </nav>
         
         <div className={styles.header__content__toggle}>
-          {!menuOpen ? <BiMenuAltRight onClick={menuToggleHandler}/> : <AiOutlineClose onClick={menuToggleHandler}/>}
+          {!menuOpen ? <BiMenuAltRight onClick={menuToggleHandler}/> : <AiOutlineClose onClick={menuToggleHandler} style={{color: 'white'}} />}
         </div>
       </div>
     </header>

@@ -1,0 +1,44 @@
+// unidades relativas: 1rem = 16px
+
+$Lato: 'Lato', sans-serif;
+
+// colors
+$yellow:#f5d300;
+$black: #191919;
+$greyDark: #292929;
+$greyLight: #757474;
+
+// spacing
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// border radius
+$borderRadius: 18px;
+
+// header height
+$headerHeight: 110px;
+
+@mixin breakpoint($point) {
+  @if $point == sm {
+    @media screen and (min-width: 480px) {
+      @content;
+    }
+  }
+  @if $point == md {
+    //48em
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  // @if $point == lg {
+  //   @media screen and (max-width: 960px) {
+  //     @content;
+  //   }
+  // }
+  // @if $point == xl {
+  //   @media screen and (max-width: 1200px) {
+  //     @content;
+  //   }
+  // }
+}

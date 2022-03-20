@@ -1,9 +1,9 @@
 @import './variables.scss';
 
 .header {
+  // position: relative;
   position: absolute;
   top: 0;
-  // background: $yellow;
   width: 100%;
   padding: 0 1.5rem;
   height: $headerHeight;
@@ -25,7 +25,7 @@
     z-index: 100;
 
     &__logo {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 900;
     //   text-decoration: none;
       color: $black;
@@ -45,7 +45,6 @@
       text-align: center;
       background: rgba($color: $black, $alpha: 0.9);
       color: $black;
-      backdrop-filter: blur(3px);
       transform: translate(0);
       transition: 0.3s ease transform;
 
@@ -86,12 +85,15 @@
 
             &:hover {
             //   background: $greyLight;
-              background: rgba($color: $greyLight, $alpha: 0.9);
+              border: 1px solid $black;
+
+              // background: rgba($color: $greyLight, $alpha: 0.9);
             }
             &:active {
               border-radius: calc(#{$borderRadius} + 6px);
-            //   background: $yellow;
-              background: linear-gradient(rgba($color: $greyLight, $alpha: 0.1), rgba($color: $greyLight, $alpha: 0.2));
+              background: $yellow;
+              border: 1px solid white
+              // background: linear-gradient(rgba($color: $greyLight, $alpha: 0.1), rgba($color: $greyLight, $alpha: 0.2));
             }
           }
         }
@@ -99,6 +101,9 @@
 
       &.isMenu {
         transform: translate(100%);
+        color: white;
+        font-size: 1.5em;
+        backdrop-filter: blur(5px);
       }
     }
 
