@@ -1,15 +1,23 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Header from '../components/header';
 // import Nav from 'react-bootstrap/Nav';
-import img1 from '../img/dev-img2.png';
+import img1 from '../img/dev-img1.png';
+import img2 from '../img/dev-img2.png';
 import styles from '../styles/Inicio.module.scss';
+
+// iconos
 import { FaRegLightbulb } from 'react-icons/fa';
+import { RiDashboardLine } from 'react-icons/ri';
+import { BiCodeAlt } from 'react-icons/bi';
+import { IoMegaphoneOutline } from 'react-icons/io5';
+import { BiVideoRecording } from 'react-icons/bi';
 
 const Inicio = () => {
   return (
     <>
       <Header />
+
       <div className={styles.hero}>
         <div className={styles.hero__container}>
           <Row>    
@@ -24,11 +32,62 @@ const Inicio = () => {
             <Col className={styles.hero__container__right}>
               <img 
                 src={img1} 
-                alt="team of developers"
+                alt="developers team"
               />
             </Col>
           </Row>
         </div>
+      </div>
+
+      <div className={styles.advertising}>
+        <Row className={styles.advertising__content}>
+          <Col sm={12} md={6} lg={6} className={styles.advertising__content__left}>
+            <img 
+              src={img2} 
+              alt="developers work"
+            />
+          </Col>
+          <Col className={styles.advertising__content__right}>
+            <h2>Aprovecha la oportunidad de tener presencia digital</h2><br />
+            <p>Se parte de la nueva economía digitalizando tu negocio a través de una págica web o aplicación.</p>
+          </Col>
+        </Row>
+      </div>
+
+      <div className={styles.services}>
+        <h2 className={styles.services__title}>Lo que hacemos</h2>
+        <Container>
+          <Row className={styles.services__content}>
+            <Col sm={6} md={3} lg={3} className={styles.services__content__item}>
+              <div className={styles.services__content__item__box}>
+                <BiCodeAlt className={styles.services__content__item__box__icon}/>
+                <h3>Desarrollo Web</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </Col>
+            <Col sm={6} md={3} lg={3} className={styles.services__content__item}>
+              <div className={styles.services__content__item__box}>
+                <IoMegaphoneOutline className={styles.services__content__item__box__icon}/>
+                <h3>Marketing Digital</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </Col>
+            <Col sm={6} md={3} lg={3} className={styles.services__content__item}>
+              <div className={styles.services__content__item__box}>
+                <RiDashboardLine className={styles.services__content__item__box__icon}/>
+                <h3>Diseño UX/UI</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </Col>
+            <Col sm={6} md={3} lg={3} className={styles.services__content__item}>
+              <div className={styles.services__content__item__box}>
+                <BiVideoRecording className={styles.services__content__item__box__icon}/>
+                <h3>Producción Audiovisual</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 const Header = () => {
 
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
   };
