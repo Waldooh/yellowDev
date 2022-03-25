@@ -45,10 +45,11 @@
         &::after {
           content: '';
           background: $black;
-          width: 50px;
-          height: 2px;
+          width: 45px;
+          height: 3px;
           display: block;
-          margin-top: 3px;
+          margin-top: 2px;
+          margin-left: 3px;
         }
       }
       &__btn1 {
@@ -111,17 +112,40 @@
   }
 }
 
-
+// ---------- Banner frase publicitaria ------------------
 .advertising {
   background-color: $yellow;
   &__content {
+    height: 55vh;
     &__left {
+      position: relative;
+      text-align: center;
       img {
+        position: absolute;
         display: none;
+        z-index: 9;
+        top: -10%;
+        left: 15%;
         @include breakpoint(sm) {
           height: auto;
-          width: 100%;
+          width: 75%;
+          margin-top: -2rem;
           display: inline-block;
+        }
+      }
+      // Elipce background de img3
+      &__poligon {
+        display: none;
+        @include breakpoint(sm) {
+          position: absolute;
+          background-color: $greyDark;
+          height: 22rem;
+          width: 29rem;
+          top: 12%;
+          left: 16%;
+          border-radius: 50%;
+          z-index: 1;
+          display: inline;
         }
       }
     }
@@ -137,12 +161,11 @@
       h2 {
         font-weight: 700;
         font-size: 2em;
-        margin-top: 2rem;
         padding-inline: 2rem;
         @include breakpoint(sm) {
           font-weight: 700;
           font-size: 2.7em;
-          padding-right: 6rem;
+          padding-right: 4rem;
         }
       }
       p {
@@ -159,9 +182,9 @@
   }
 }
 
-
+//-------------- Lo que hacemos ------------
 .services {
-  padding-top: 2rem;
+  padding-top: 5rem;
   margin-inline: 2rem;
   @include breakpoint(sm) {
     width: 100%;
@@ -169,33 +192,64 @@
   &__title {
     font-weight: 900;
     font-size: 2em;
+    margin-bottom: 1.5rem;
     @include breakpoint(sm) {
       padding-left: 2.7rem;
       font-size: 3em;
+      margin-bottom: 1.5rem;
     }
     &::after {
       content: '';
       background: $yellow;
-      width: 40px;
-      height: 3px;
+      width: 45px;
+      height: 5px;
       display: block;
       margin-top: 4px;
+      margin-left: 2px;
     }
   }
 
   &__content {
-    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 45px;
+    background-color: $black;
+    width: 100%;
     @include breakpoint(sm) {
-      padding-top: 2rem;
-      padding-right: 2rem;
+      margin-top: 2rem;
+      // padding-top: 2rem;
+      // padding-right: 2rem;
     }
     &__item {
-      padding-top: 1rem;
+      // margin-top: 1rem;
+      &:hover {
+        background-color: $yellow;
+        border-radius: 45px;
+        h3, p {
+          color: $black;
+        }
+      }
+      &__titleText {
+        color: #fff;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        h3 {
+          font-weight: 600;
+        }
+        p {
+          &::before {
+            content: '';
+            background: $yellow;
+            width: 45px;
+            height: 4px;
+            display: block;
+            margin-bottom: 6px;
+          }
+        }
+      }
       &__box {
         text-align: center;
-        background-color: $greyDark;
-        border-radius: 45px;
-        padding-bottom: 1rem;
+        // border-radius: 45px;
+        // padding-bottom: 1rem;
         @include breakpoint(sm) {
           height: 300px;
         }
